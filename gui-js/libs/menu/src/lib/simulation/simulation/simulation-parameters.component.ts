@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CommunicationService, ElectronService } from '@minsky/core';
+import { CommunicationService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 //import { commandsMapping } from '@minsky/shared';
 
 @Component({

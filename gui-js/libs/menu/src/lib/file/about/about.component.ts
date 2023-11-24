@@ -1,5 +1,5 @@
 import { Component, OnInit, VERSION } from '@angular/core';
-import { ElectronService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 import { version } from '@minsky/shared';
 
 @Component({

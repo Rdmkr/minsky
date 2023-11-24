@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { ElectronService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 import { events } from '@minsky/shared';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 

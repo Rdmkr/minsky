@@ -16,7 +16,7 @@
 │   ├── menu [The popup UIs for Electron Menus]
 │   ├── minsky-server [The Socket.IO server (We are no longer using this. Kept here as a backup)]
 │   ├── shared [Shared Resources across projects (like shared constants, functions,interfaces, css themes etc)]
-│   └── ui-components [Angular UI components for context menus, non menu popups etc]
+│   └── shared-ui [Angular UI components for context menus, non menu popups etc]
 ├── minsky-docs [HELP menu related resources]
 ├── README.md
 ├── package.json

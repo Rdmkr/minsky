@@ -15,9 +15,8 @@ import {
   ZOOM_OUT_FACTOR,
 } from '@minsky/shared';
 import { BehaviorSubject } from 'rxjs';
-import { WindowUtilityService } from '../WindowUtility/window-utility.service';
 import { DialogComponent } from './../../component/dialog/dialog.component';
-import { ElectronService } from './../electron/electron.service';
+import { ElectronService, WindowUtilityService } from '@minsky/deepcore';
 import * as JSON5 from 'json5';
 
 export class Message {

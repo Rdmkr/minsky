@@ -1,6 +1,7 @@
 import { Component, HostListener, DoCheck, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommunicationService, ElectronService, WindowUtilityService } from '@minsky/core';
+import { CommunicationService } from '@minsky/core';
+import { ElectronService, WindowUtilityService } from '@minsky/deepcore';
 import { events, MainRenderingTabs, RenderNativeWindow } from '@minsky/shared';
 import { TranslateService } from '@ngx-translate/core';
 

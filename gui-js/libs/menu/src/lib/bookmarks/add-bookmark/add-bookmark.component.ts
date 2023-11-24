@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ElectronService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 import { events, } from '@minsky/shared';
 
 @Component({

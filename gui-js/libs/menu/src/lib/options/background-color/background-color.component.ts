@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
-import { CommunicationService, ElectronService } from '@minsky/core';
+import { CommunicationService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 @Component({
   selector: 'minsky-background-color',
   templateUrl: './background-color.component.html',

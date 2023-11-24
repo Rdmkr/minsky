@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@minsky/shared';
-import { UiComponentsModule } from '@minsky/ui-components';
+import { SharedUiModule } from '@minsky/shared-ui';
 import { CreateVariableComponent } from './create-variable/create-variable.component';
 import { InsertRoutingModule } from './insert-routing.module';
 
@@ -10,8 +9,7 @@ import { InsertRoutingModule } from './insert-routing.module';
   imports: [
     CommonModule,
     InsertRoutingModule,
-    SharedModule,
-    UiComponentsModule,
+    SharedUiModule
   ],
 })
 export class InsertModule {}

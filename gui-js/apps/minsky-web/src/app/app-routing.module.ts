@@ -25,7 +25,7 @@ import {
   EditHandleDimensionComponent, 
   PickSlicesComponent,
   LockHandlesComponent
-} from '@minsky/ui-components';
+} from '@minsky/shared-ui';
 
 const routes: Routes = [
   {
@@ -138,8 +138,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
-      relativeLinkResolution: 'legacy',
+      useHash: true
     }),
   ],
   exports: [RouterModule],

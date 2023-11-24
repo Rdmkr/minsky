@@ -5,8 +5,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from '@minsky/core';
-import { SharedModule } from '@minsky/shared';
-import { UiComponentsModule } from '@minsky/ui-components';
+import { SharedUiModule } from '@minsky/shared-ui';
 // NG Translate
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -28,10 +27,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FormsModule,
     HttpClientModule,
     CoreModule,
-    SharedModule,
+    SharedUiModule,
     MatProgressSpinnerModule,
     AppRoutingModule,
-    UiComponentsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

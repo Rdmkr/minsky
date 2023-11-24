@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@minsky/shared';
+import { SharedUiModule } from '@minsky/shared-ui';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ContextMenuRoutingModule } from './context-menu-routing.module';
 import { PenStylesComponent } from './pen-styles/pen-styles.component';
@@ -8,7 +8,7 @@ import { PenStylesComponent } from './pen-styles/pen-styles.component';
   declarations: [PenStylesComponent],
   imports: [
     CommonModule,
-    SharedModule,
+    SharedUiModule,
     ContextMenuRoutingModule,
     ColorPickerModule,
   ],

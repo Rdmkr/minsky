@@ -1,0 +1,114 @@
+{
+  "name": "minsky-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "sourceRoot": "apps/minsky-web/src",
+  "prefix": "minsky",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "allowedCommonJsDependencies": ["debug", "css-element-queries"],
+        "outputPath": "dist/apps/minsky-web",
+        "index": "apps/minsky-web/src/index.html",
+        "main": "apps/minsky-web/src/main.ts",
+        "polyfills": "apps/minsky-web/src/polyfills.ts",
+        "tsConfig": "apps/minsky-web/tsconfig.app.json",
+        "assets": [
+          "apps/minsky-web/src/favicon.ico",
+          "apps/minsky-web/src/assets"
+        ],
+        "styles": ["apps/minsky-web/src/styles.scss"],
+        "scripts": ["node_modules/mathjax/es5/tex-svg.js"],
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "buildOptimizer": false,
+        "sourceMap": true,
+        "optimization": false,
+        "namedChunks": true
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/minsky-web/src/environments/environment.ts",
+              "with": "apps/minsky-web/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "6kb",
+              "maximumError": "10kb"
+            }
+          ]
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "minsky-web:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "minsky-web:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "minsky-web:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/minsky-web/src/**/*.ts",
+          "apps/minsky-web/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/minsky-web/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/apps/minsky-web"]
+    },
+    "compodoc": {
+      "executor": "@twittwer/compodoc:compodoc",
+      "options": {
+        "tsConfig": "apps/minsky-web/tsconfig.compodoc.json",
+        "outputPath": "dist/compodoc/minsky-web",
+        "workspaceDocs": true
+      },
+      "configurations": {
+        "json": {
+          "exportFormat": "json"
+        }
+      }
+    }
+  }
+}

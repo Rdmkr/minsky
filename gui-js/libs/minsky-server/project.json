@@ -1,0 +1,23 @@
+{
+  "name": "minsky-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/minsky-server/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/minsky-server/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "libs/minsky-server/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/libs/minsky-server"]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { ElectronService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 import { dateTimeFormats } from '@minsky/shared';
 
 interface Second {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { ElectronService } from '@minsky/core';
+import { ElectronService } from '@minsky/deepcore';
 import { PlotWidget } from '@minsky/shared';
 
 enum DashStyles {

@@ -140,7 +140,6 @@ export class OperationBase extends Item {
 }
 
 export class VariableBase extends Item {
-  bb: BoundingBox;
   constructor(prefix: string|Item){
     if (typeof prefix==='string')
       super(prefix)
@@ -1016,7 +1015,6 @@ export class GodleyTableWindow extends CppClass {
 }
 
 export class Group extends Item {
-  bb: BoundingBox;
   bookmarks: Container<Bookmark>;
   createdIOvariables: Sequence<VariableBase>;
   groups: Sequence<Group>;

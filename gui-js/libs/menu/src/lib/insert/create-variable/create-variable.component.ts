@@ -7,10 +7,9 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import {
-  CommunicationService,
-  ElectronService,
-  WindowUtilityService,
+  CommunicationService
 } from '@minsky/core';
+import { ElectronService, WindowUtilityService } from '@minsky/deepcore';
 import { VariableBase } from '@minsky/shared';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
