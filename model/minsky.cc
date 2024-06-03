@@ -1726,6 +1726,15 @@ namespace minsky
                        });
   }
 
+  void Minsky::refreshAllLocks() {
+    reset();
+    for (auto& i: g->items) { 
+      if (auto v=dynamic_cast<Lock*>(i)) {
+        v->refreshImmediate();
+      }
+    }
+  }
+
   size_t Minsky::physicalMem() const
   {
 #if defined(__linux__)

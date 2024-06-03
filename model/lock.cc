@@ -66,15 +66,26 @@ namespace minsky
     if (locked())
       lockedState.clear();
     else
-      if (auto* r=ravelInput())
+        refresh();
+  }
+
+  void Lock::refresh() {
+    if (auto* r=ravelInput())
         {
           // need to a full reset at this point, not delayed
           minsky::minsky().reset();
-          lockedState=r->getState();
-          tooltip(ravel::Ravel::description(lockedState));
+          refresh();
         }
       else
         throw_error("Locks can only be applied to Ravels");
+  }
+
+  void Lock::refreshImmediate() {
+    if (auto* r=ravelInput())
+    {
+      lockedState=r->getState();
+      tooltip(ravel::Ravel::description(lockedState));
+    }
   }
 
   void Lock::draw(cairo_t* cairo) const 

@@ -434,6 +434,9 @@ namespace minsky
     /// request all Godley table windows to redraw
     void redrawAllGodleyTables();
 
+    /// refresh all locks
+    refreshAllLocks();
+
     /// set/clear busy cursor in GUI
     virtual void setBusyCursor() {}
     virtual void clearBusyCursor() {}

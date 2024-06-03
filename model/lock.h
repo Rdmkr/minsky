@@ -38,6 +38,8 @@ namespace minsky
 
     bool locked() const {return !lockedState.empty();}
     void toggleLocked();
+    void refresh();
+    void refreshImmediate();
 
     static SVGRenderer lockedIcon;
     static SVGRenderer unlockedIcon;

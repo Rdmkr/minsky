@@ -130,7 +130,7 @@ namespace minsky
     /// @{ a more efficient replacement for dynamic_cast<Ravel*>(this)
     virtual const Ravel* ravelCast() const {return nullptr;}
     virtual Ravel* ravelCast() {return nullptr;}
-    /// @}            
+    /// @}      
 
     /// insert this items controlled or controller items are inserted
     /// correctly into \a selection.

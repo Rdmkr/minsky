@@ -1068,18 +1068,37 @@ export class ContextMenuManager {
   }
 
   private static async buildContextMenuForLock(): Promise<MenuItem[]> {
-    let ravel=new Lock(minsky.canvas.item);
-    return [
+    const lock=new Lock(minsky.canvas.item);
+    const locked = await lock.locked();
+
+    const options = [
       new MenuItem({
-        label: (await ravel.locked())? 'Unlock': 'Lock',
-        click: () => {ravel.toggleLocked();}
-      }),
-      new MenuItem({
-        label: 'Apply state to Ravel',
-        click: () => {ravel.applyLockedStateToRavel();}
-      }),
-      
+        label: locked ? 'Unlock': 'Lock',
+        click: () => {lock.toggleLocked();}
+      })
     ];
+
+    if(locked) {
+     options.push(new MenuItem({
+        label: 'Refresh',
+        click: () => {
+          lock.refresh();
+        }
+      }));
+    }
+
+    options.push(new MenuItem({
+      label: 'Refresh all locks',
+      click: () => {
+        minsky.refreshAllLocks();
+      }
+    }),
+    new MenuItem({
+      label: 'Apply state to Ravel',
+      click: () => {lock.applyLockedStateToRavel();}
+    }));
+
+    return options;
   }
 
   private static async buildContextMenuForVariables(
